@@ -9,9 +9,17 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 " Syntax and language improvements
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'elzr/vim-json'
+" Plug 'pangloss/vim-javascript'
+"Plug 'isruslan/vim-es6'
+"Plug 'jelera/vim-javascript-syntax'
+"Plug 'mxw/vim-jsx'
+"Plug 'elzr/vim-json'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/yajs.vim'
+"Plug 'othree/es.next.syntax.vim'
+"Plug 'vim-scripts/SyntaxComplete'
+" HerringtonDarkholme/yats.vim
+" othree/html5.vim
 
 " General
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -62,8 +70,12 @@ filetype plugin indent on
 if (has("termguicolors"))
   set termguicolors
 endif
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax enable
-colorscheme OceanicNext
+colorscheme gruvbox
+set background=dark
+let g:gruvbox_contrast_dark = 'soft'
+"let g:used_javascript_libs = 'underscore,backbone,react'
 set listchars=eol:¬,tab:␣␣,trail:~,extends:>,precedes:<,space:␣
 set list
 set number
