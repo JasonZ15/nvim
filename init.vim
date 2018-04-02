@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'pangloss/vim-javascript'
 "Plug 'isruslan/vim-es6'
 "Plug 'jelera/vim-javascript-syntax'
-"Plug 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx'
 "Plug 'elzr/vim-json'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'othree/yajs.vim'
@@ -63,7 +63,7 @@ let g:syntastic_check_on_wq = 0
 
 " GitGutter
 set updatetime=250
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 
 " Themes and syntax
 filetype plugin indent on
@@ -75,7 +75,7 @@ syntax enable
 colorscheme gruvbox
 set background=dark
 let g:gruvbox_contrast_dark = 'soft'
-"let g:used_javascript_libs = 'underscore,backbone,react'
+autocmd BufNewFile,BufRead *.es6 set filetype=javascript.jsx "yajs will see it as javascript filetype
 set listchars=eol:¬,tab:␣␣,trail:~,extends:>,precedes:<,space:␣
 set list
 set number
