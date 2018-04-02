@@ -76,7 +76,7 @@ colorscheme gruvbox
 set background=dark
 let g:gruvbox_contrast_dark = 'soft'
 autocmd BufNewFile,BufRead *.es6 set filetype=javascript.jsx "yajs will see it as javascript filetype
-set listchars=eol:¬,tab:␣␣,trail:~,extends:>,precedes:<,space:␣
+set listchars=eol:¬,tab:␣␣,trail:~,extends:>,precedes:<,space:·
 set list
 set number
 set nowrap
